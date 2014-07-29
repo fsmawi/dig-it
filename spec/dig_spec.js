@@ -1,7 +1,6 @@
 var dig = require('../lib/dig');
 
 describe('dig', function () {
-
   var noArray = { foo: { bar: { baz: 'bing!' } } };
   var singleArray = { foo: { bars: [{ baz: 'bing!' }, { baz: 'boom!'}] } };
   var multiArray = { foos: [{ bars: [{ baz: 'bing!' }, { baz: 'boom!'}] }, { bars: [{ baz: 'blam!' }] }] };
