@@ -4,7 +4,7 @@
   "description": "\"Dig\" into nested data structures in order to aggregate or set values at an object \"path\"",
   "main": "index.js",
   "scripts": {
-    "test": "testem"
+    "test": "testem ci"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/squirkle/dig-it",
   "dependencies": {
     "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "testem": "^0.6.17"
   }
 }
