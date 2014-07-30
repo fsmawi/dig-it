@@ -1,21 +1,25 @@
 {
-  "name": "dig",
+  "name": "dig-it",
   "version": "0.0.1",
-  "description": "\"Dig\" into nested data structures in order to aggregate or set values at a \"path\"",
+  "description": "\"Dig\" into nested data structures in order to aggregate or set values at an object \"path\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testem"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/squirkle/dig.git"
+    "url": "https://github.com/squirkle/dig-it.git"
   },
-  "author": "Philip Allen",
-  "license": "ISC",
+  "keywords": [
+    "pluck",
+    "deep"
+  ],
+  "author": "Philip Allen <philip.allen.dev@gmail.com> (http://github.com/squirkle)",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/squirkle/dig/issues"
+    "url": "https://github.com/squirkle/dig-it/issues"
   },
-  "homepage": "https://github.com/squirkle/dig",
+  "homepage": "https://github.com/squirkle/dig-it",
   "dependencies": {
     "lodash": "^2.4.1"
   }
