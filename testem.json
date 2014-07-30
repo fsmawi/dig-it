@@ -7,6 +7,9 @@
   "launch_in_dev": [
     "Jasmine"
   ],
+  "launch_in_ci": [
+    "Jasmine"
+  ],
   "launchers": {
     "Jasmine": {
       "command": "jasmine-node spec/"
