@@ -1,11 +1,11 @@
 var dig = require('../lib/dig');
 
-describe('dig', function () {
+describe('dig()', function () {
   var noArray = { foo: { bar: { baz: 'bing!' } } };
   var singleArray = { foo: { bars: [{ baz: 'bing!' }, { baz: 'boom!'}] } };
   var multiArray = { foos: [{ bars: [{ baz: 'bing!' }, { baz: 'boom!'}] }, { bars: [{ baz: 'blam!' }] }] };
 
-  describe('dig().get()', function () {
+  describe('.get()', function () {
     describe('on a simple nested object structure', function () {
       it('should return the value of the the nested property', function () {
         var nested = dig(noArray).get('foo.bar.baz');
@@ -34,13 +34,13 @@ describe('dig', function () {
 
     describe('on a path whose target doesn\'t exist', function () {
       it('should return undefined', function () {
-        var val = dig({foo: 'bar'}).get('foo.baz.bing.bam');
+        var val = dig({foo: [{ baz: { bim: 'val' } }] }).get('foo.baz.bing');
         expect(val).toBe(undefined);
       });
     });
   });
 
-  describe('dig.set()', function () {
+  describe('.set()', function () {
     describe('on a simple nested object structure', function () {
       var nestedData = { foo: { bar: { baz: 'bing!' } } };
       it('should return the value of the the nested property', function () {
