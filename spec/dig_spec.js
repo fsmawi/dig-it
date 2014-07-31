@@ -31,6 +31,13 @@ describe('dig', function () {
         expect(nested[2]).toBe('blam!');
       });
     });
+
+    describe('on a path whose target doesn\'t exist', function () {
+      it('should return undefined', function () {
+        var val = dig({foo: 'bar'}).get('foo.baz.bing.bam');
+        expect(val).toBe(undefined);
+      });
+    });
   });
 
   describe('dig.set()', function () {
@@ -63,6 +70,14 @@ describe('dig', function () {
         expect(multiArray.foos[0].bars[0].baz).toEqual(0);
         expect(multiArray.foos[0].bars[1].baz).toEqual(1);
         expect(multiArray.foos[1].bars[0].baz).toEqual(2);
+      });
+    });
+
+    describe('on a path whose target doesn\'t exist', function () {
+      it('should return undefined', function () {
+        var data = {foo: 'bar'};
+        dig(data).set('baz.bing', function () { return 'test'; });
+        expect(data).toEqual({ foo: 'bar', baz: { bing: 'test' } });
       });
     });
   });

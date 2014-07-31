@@ -1,6 +1,6 @@
 {
   "name": "dig-it",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "\"Dig\" into nested data structures in order to aggregate or set values at an object \"path\"",
   "main": "index.js",
   "scripts": {
