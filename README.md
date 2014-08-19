@@ -3,7 +3,9 @@
 A simple utility for getting/setting values on nested data structures.  If you are familiar with Lodash's "pluck" method, this is similar, but for nested arrays and objects.
 
 ## Instalation
+```bash
 npm install dig-it
+```
 
 ## Usage
 
